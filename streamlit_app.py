@@ -25,7 +25,8 @@ cnx = st.connection("snowflake")
 session = cnx.session()
 
 my_dataframe = session.table("smoothies.public.fruit_options")
-# st.dataframe(data=my_dataframe, use_container_width=True)
+st.dataframe(data=my_dataframe, use_container_width=True)
+st.stop()
 
 # Convert the Snowpark DataFrame to a Pandas DataFrame
 df = my_dataframe.to_pandas()
